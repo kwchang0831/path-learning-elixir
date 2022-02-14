@@ -7,11 +7,11 @@
 # 1) Start ExUnit
 ExUnit.start()
 
-# 2) Create test moudle
+# 2) Create test module
 defmodule AssertionTest do
   use ExUnit.Case, async: true
 
-  test "possitive assertion" do
+  test "positive assertion" do
     assert true
   end
 

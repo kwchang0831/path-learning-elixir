@@ -2,45 +2,37 @@
 
 This is my path of learning Elixir.  
 Refer to each `.exs` script files for more.  
-Each file is completely self-contained.
 
-## Runs and Ouputs
 
-### 00-HelloWorld.exs
+## Prerequisite
 
-Run
+- Elixir: [https://elixir-lang.org/install.html](https://elixir-lang.org/install.html)
+
+## Run
+
+Each file is completely self-contained.  
+Using the following command to run it.  
 
 ```shell
 elixir 00-HelloWorld.exs
 ```
 
-Output
+## Contents
 
-```shell
-Hello World from Elixir
-```
+- ### 00-HelloWorld.exs
 
-### 01-ExUnit.exs
+- ### 01-ExUnit.exs
 
-Run
+- ### 02-List.exs
 
-```shell
-elixir 01-ExUnit.exs
-```
-
-Output
-
-```shell
-........
-
-Finished in 0.1 seconds (0.09s on load, 0.01s async, 0.00s sync)
-8 tests, 0 failures
-```
-
-## Formating
+## Formatting
 
 All `.exs` files are formatted using `mix format`.
 
 ```shell
 mix format ./*.exs
 ```
+
+## Notes
+
+Inspired by **30 Days of Elixir**: [https://github.com/seven1m/30-days-of-elixir](https://github.com/seven1m/30-days-of-elixir)
