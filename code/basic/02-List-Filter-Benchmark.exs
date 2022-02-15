@@ -50,16 +50,26 @@ defmodule Benchmark do
   def run() do
     Benchee.run(
       %{
-        "Comprehension" => fn input -> Benchmark.List.Comprehension.filter(input) end,
-        "Enum_Filter" => fn input -> Benchmark.List.EnumFilter.filter(input) end,
-        "Enum_Filter_Map" => fn input -> Benchmark.List.EnumFilterMap.filter(input) end,
-        "Stream_Filter_Map" => fn input -> Benchmark.List.StreamFilterMap.filter(input) end,
-        "Stream_Filter_ToList" => fn input -> Benchmark.List.StreamFilterToList.filter(input) end
+        "for comprehension" => fn input ->
+          Benchmark.List.Comprehension.filter(input)
+        end,
+        "Enum.filter/2" => fn input ->
+          Benchmark.List.EnumFilter.filter(input)
+        end,
+        "Enum.filter/2 |> Enum.map/2" => fn input ->
+          Benchmark.List.EnumFilterMap.filter(input)
+        end,
+        "Stream.filter/2 |> Enum.map/2" => fn input ->
+          Benchmark.List.StreamFilterMap.filter(input)
+        end,
+        "Stream.filter/2 |> Enum.to_list/1" => fn input ->
+          Benchmark.List.StreamFilterToList.filter(input)
+        end
       },
       time: 10,
       memory_time: 2,
       inputs: %{
-        "Large" => Enum.take(StreamData.integer(), 1_000_000)
+        "Million Integers" => Enum.take(StreamData.integer(), 1_000_000)
       }
     )
   end

@@ -29,10 +29,10 @@ mix run ./code/basic/00-HelloWorld.exs
 Filter even numbers from a list of million integers
 
 ```shell
-Comparison:                  
-Comprehension                30.90
-Enum_Filter                  28.41 - 1.09x slower +2.84 ms
-Enum_Filter_Map              20.67 - 1.50x slower +16.03 ms
-Stream_Filter_ToList         13.34 - 2.32x slower +42.61 ms
-Stream_Filter_Map            12.07 - 2.56x slower +50.48 ms
+Comparison:
+for comprehension                         32.14
+Enum.filter/2                             29.52 - 1.09x slower +2.76 ms
+Enum.filter/2 |> Enum.map/2               21.66 - 1.48x slower +15.04 ms
+Stream.filter/2 |> Enum.to_list/1         13.40 - 2.40x slower +43.49 ms
+Stream.filter/2 |> Enum.map/2             12.73 - 2.52x slower +47.42 ms
 ```
