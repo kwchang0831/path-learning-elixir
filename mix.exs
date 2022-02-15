@@ -13,7 +13,8 @@ defmodule LearningElixir.Mixfile do
 
   defp deps do
     [
-      {:stream_data, "~> 0.5.0"}
+      {:stream_data, "~> 0.5.0"},
+      {:benchee, "~> 1.0"}
     ]
   end
 end
