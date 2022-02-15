@@ -9,18 +9,17 @@ Please refer to each `.exs` script file for more.
 
 ## Run
 
-Get all dependencies first
+Get dependencies first
 
 ```shell
 mix do deps.get
 ```
 
-Then, use the following command to run the specific exercise
+Run the specific exercise
 
 ```shell
 mix run ./code/basic/00-HelloWorld.exs
 ```
-
 
 ## Contents
 
