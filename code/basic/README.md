@@ -24,7 +24,9 @@ mix run ./code/basic/00-HelloWorld.exs
 
 ### **02-List-Filter-Benchmark.exs**
   
-Quick Summary:
+#### Quick Summary
+
+Filter even numbers from a list of million integers
 
 ```shell
 Comparison:                  
