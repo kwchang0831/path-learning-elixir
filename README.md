@@ -9,14 +9,22 @@ Please refer to each `.exs` script file for more.
 
 ## Run
 
-Each file is completely self-contained.  
-Using the following command to run it.  
+Get all dependencies first
 
 ```shell
-elixir 00-HelloWorld.exs
+mix do deps.get
 ```
 
+Then, use the following command to run the specific exercise
+
+```shell
+mix run ./code/basic/00-HelloWorld.exs
+```
+
+
 ## Contents
+
+### Basic
 
 - **00-HelloWorld.exs**
 
@@ -26,8 +34,8 @@ elixir 00-HelloWorld.exs
 
 ## Formatting
 
-All `.exs` files are formatted using `mix format`.
+All `.exs` files are formatted using `mix format`, see `.formatter.exs`.
 
 ```shell
-mix format ./*.exs
+mix format
 ```
