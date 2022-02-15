@@ -24,13 +24,7 @@ mix run ./code/basic/00-HelloWorld.exs
 
 ## Contents
 
-### Basic
-
-- **00-HelloWorld.exs**
-
-- **01-ExUnit.exs**
-
-- **02-List.exs**
+- ### [Basic](https://github.com/kwchang0831/path-learning-elixir/tree/main/code/basic)
 
 ## Formatting
 
