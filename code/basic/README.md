@@ -16,15 +16,21 @@ mix run ./code/basic/00-HelloWorld.exs
 
 ## Contents
 
-### **00-HelloWorld.exs**
+### Level 0
 
-### **01-ExUnit.exs**
+#### **00-HelloWorld.exs**
 
-### **02-List.exs**
+### Level 1
 
-### **02-List-Filter-Benchmark.exs**
-  
-#### Quick Summary
+#### **01-ExUnit.exs**
+
+Get familiar with Elixir's unit testing feature.
+
+### Level 2
+
+#### **02-List.exs**
+
+#### **02-List-Filter-Benchmark.exs**
 
 Filter even numbers from a list of million integers
 
@@ -36,3 +42,5 @@ Enum.filter/2 |> Enum.map/2               21.66 - 1.48x slower +15.04 ms
 Stream.filter/2 |> Enum.to_list/1         13.40 - 2.40x slower +43.49 ms
 Stream.filter/2 |> Enum.map/2             12.73 - 2.52x slower +47.42 ms
 ```
+
+#### **02-Map.exs**

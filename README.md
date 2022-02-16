@@ -1,7 +1,8 @@
 # My Path of Learning Elixir
 
 This is my path of learning Elixir. Inspired by [**30 Days of Elixir**](https://github.com/seven1m/30-days-of-elixir).  
-Please refer to each `.exs` script file for more.  
+
+Please refer to [Contents](#contents) and each `.exs` script files for more details.  
 
 ## Prerequisite
 
