@@ -6,7 +6,7 @@ Please refer to [Contents](#contents) and each `.exs` script files for more deta
 
 ## Prerequisite
 
-- Elixir: [https://elixir-lang.org/install.html](https://elixir-lang.org/install.html)
+- Install Elixir: [https://elixir-lang.org/install.html](https://elixir-lang.org/install.html)
 
 ## Run
 
