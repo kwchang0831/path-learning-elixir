@@ -13,7 +13,7 @@
 ExUnit.start()
 
 # 2) Create test module
-defmodule AssertionTest do
+defmodule AssertionTest_02List do
   use ExUnit.Case, async: true
 
   setup do

@@ -7,7 +7,7 @@
 ExUnit.start()
 
 # 2) Create test module
-defmodule AssertionTest do
+defmodule AssertionTest_02Map do
   use ExUnit.Case, async: true
 
   defp input(), do: %{"zero" => 0, one: 1, two: 2}
