@@ -56,3 +56,7 @@ map[key]           8.37 K - 1.12x slower +12.85 μs
 Map.fetch/2        7.49 K - 1.25x slower +26.90 μs
 Map.take/2         5.11 K - 1.83x slower +88.92 μs
 ```
+
+### Level 3
+
+#### **03-File-IO.exs**
