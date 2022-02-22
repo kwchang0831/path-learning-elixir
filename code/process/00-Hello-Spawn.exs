@@ -13,36 +13,21 @@ defmodule Hello_Spawner do
   def greet do
     receive do
       {caller, value} ->
-        send(
-          caller,
-          {:ok, "Got Msg from #{inspect(caller)}: Hello #{value} - @#{inspect(self())}"}
-        )
+        IO.puts("#{inspect(self())} | Got Msg from #{inspect(caller)}: Hello #{value}")
     end
   end
 end
 
 # 2) Client start Server by calling :start
 pid = Hello_Spawner.start()
-IO.puts("Started Hello_Spawner Server 1 @#{inspect(pid)}")
+IO.puts("#{inspect(self())} | Started Hello_Spawner Server 1: #{inspect(pid)}")
 
 # Send message to the Server
 send(pid, {self(), "kwchang0831"})
-
-# Receive feedback from the Server
-receive do
-  {:ok, msg} ->
-    IO.puts(msg)
-end
 
 # 3) Client start Server by calling spawn
 pid = spawn(Hello_Spawner, :greet, [])
-IO.puts("Started Hello_Spawner Server 2 @#{inspect(pid)}")
+IO.puts("#{inspect(self())} | Started Hello_Spawner Server 2: #{inspect(pid)}")
 
 # Send message to the Server
 send(pid, {self(), "kwchang0831"})
-
-# Receive feedback from the Server
-receive do
-  {:ok, msg} ->
-    IO.puts(msg)
-end

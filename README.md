@@ -1,6 +1,8 @@
 # My Path of Learning Elixir
 
-This is my path of learning Elixir. Inspired by [**30 Days of Elixir**](https://github.com/seven1m/30-days-of-elixir).  
+This is my path of learning Elixir. Learning by doing.  
+
+Inspired by [**30 Days of Elixir**](https://github.com/seven1m/30-days-of-elixir).  
 
 Please refer to [Contents](#contents) and each `.exs` script files for more details.  
 
@@ -25,6 +27,7 @@ mix run ./code/basic/00-HelloWorld.exs
 ## Contents
 
 - ### [Basic](https://github.com/kwchang0831/path-learning-elixir/tree/main/code/basic)
+
 - ### [Process](https://github.com/kwchang0831/path-learning-elixir/tree/main/code/process)
 
 ## Formatting
