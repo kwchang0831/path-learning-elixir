@@ -18,19 +18,19 @@ mix run ./code/basic/00-HelloWorld.exs
 
 ### Level 0
 
-#### **00-HelloWorld.exs**
+#### [**00-HelloWorld.exs**](https://github.com/kwchang0831/path-learning-elixir/blob/main/code/basic/00-HelloWorld.exs)
 
 ### Level 1
 
-#### **01-ExUnit.exs**
+#### [**01-ExUnit.exs**](https://github.com/kwchang0831/path-learning-elixir/blob/main/code/basic/01-ExUnit.exs)
 
 Get familiar with Elixir's unit testing feature.
 
 ### Level 2
 
-#### **02-List.exs**
+#### [**02-List.exs**](https://github.com/kwchang0831/path-learning-elixir/blob/main/code/basic/02-List.exs)
 
-#### **02-List-Filter-Benchmark.exs**
+#### [**02-List-Filter-Benchmark.exs**](https://github.com/kwchang0831/path-learning-elixir/blob/main/code/basic/02-List-Filter-Benchmark.exs)
 
 Filter even numbers from a list of million integers
 
@@ -44,9 +44,9 @@ Stream.filter/2 |> Enum.to_list/1         13.40 - 2.40x slower +43.49 ms
 Stream.filter/2 |> Enum.map/2             12.73 - 2.52x slower +47.42 ms
 ```
 
-#### **02-Map.exs**
+#### [**02-Map.exs**](https://github.com/kwchang0831/path-learning-elixir/blob/main/code/basic/02-Map.exs)
 
-#### **02-Map-Access-Benchmark.exs**
+#### [**02-Map-Access-Benchmark.exs**](https://github.com/kwchang0831/path-learning-elixir/blob/main/code/basic/02-Map-Access-Benchmark.exs)
 
 Access random 1_000 keys from a map contains half a million keys
 
@@ -61,11 +61,11 @@ Map.take/2         5.11 K - 1.83x slower +88.92 μs
 
 ### Level 3
 
-#### **03-File-IO.exs**
+#### [**03-File-IO.exs**](https://github.com/kwchang0831/path-learning-elixir/blob/main/code/basic/03-File-IO.exs)
 
 ### Level 4
 
-#### **04-Fibonacci.exs**
+#### [**04-Fibonacci.exs**](https://github.com/kwchang0831/path-learning-elixir/blob/main/code/basic/04-Fibonacci.exs)
 
 ```shell
 ##### With input n=10..25(take 5) #####
