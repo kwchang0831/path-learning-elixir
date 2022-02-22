@@ -71,32 +71,36 @@ Map.take/2         5.11 K - 1.83x slower +88.92 μs
 ##### With input n=10..25(take 5) #####
 Comparison:
 Name                       ips 
-Fib_BinetFormula     1687.65 K
-Fib_Accumulator      1081.76 K - 1.56x slower +0.33 μs
-Fib_Cached            315.70 K - 5.35x slower +2.58 μs
-Fib_Stream            144.89 K - 11.65x slower +6.31 μs
-Fib_Naive               1.80 K - 940.15x slower +556.49 μs
+Fib_BinetFormula        1.85 M
+Fib_Accumulator2        1.48 M - 1.25x slower +0.134 μs
+Fib_Accumulator         1.19 M - 1.55x slower +0.30 μs
+Fib_Cached              0.40 M - 4.67x slower +1.99 μs
+Fib_Stream             0.124 M - 14.93x slower +7.55 μs
+Fib_Naive            0.00948 M - 194.60x slower +104.92 μs
 
 Name                Memory usage
 Fib_BinetFormula         0.36 KB
-Fib_Accumulator          2.03 KB - 5.65x memory usage +1.67 KB
-Fib_Cached               6.01 KB - 16.72x memory usage +5.65 KB
-Fib_Stream              10.90 KB - 30.33x memory usage +10.54 KB
+Fib_Accumulator2         0.20 KB - 0.57x memory usage -0.15625 KB
+Fib_Accumulator          1.77 KB - 4.93x memory usage +1.41 KB
+Fib_Cached               4.38 KB - 12.20x memory usage +4.02 KB
+Fib_Stream               9.78 KB - 27.22x memory usage +9.42 KB
 Fib_Naive                0.20 KB - 0.57x memory usage -0.15625 KB
 
 ##### With input n=10..25(take 25) #####
 Comparison:
 Name                       ips 
-Fib_BinetFormula      376.40 K
-Fib_Cached            229.92 K - 1.64x slower +1.69 μs
-Fib_Accumulator       195.32 K - 1.93x slower +2.46 μs
-Fib_Stream             37.41 K - 10.06x slower +24.08 μs
-Fib_Naive               0.28 K - 1337.09x slower +3549.62 μs
+Fib_BinetFormula      407.58 K
+Fib_Accumulator2      284.14 K - 1.43x slower +1.07 μs
+Fib_Cached            235.16 K - 1.73x slower +1.80 μs
+Fib_Accumulator       178.59 K - 2.28x slower +3.15 μs
+Fib_Stream             39.06 K - 10.44x slower +23.15 μs
+Fib_Naive               0.37 K - 1115.52x slower +2734.48 μs
 
 Name                Memory usage
 Fib_BinetFormula         1.61 KB
+Fib_Accumulator2         0.83 KB - 0.51x memory usage -0.78125 KB
 Fib_Cached               7.38 KB - 4.59x memory usage +5.77 KB
-Fib_Accumulator          9.99 KB - 6.21x memory usage +8.38 KB
-Fib_Stream              54.41 KB - 33.81x memory usage +52.80 KB
+Fib_Accumulator          9.69 KB - 6.02x memory usage +8.08 KB
+Fib_Stream              53.09 KB - 32.99x memory usage +51.48 KB
 Fib_Naive                0.83 KB - 0.51x memory usage -0.78125 KB
 ```

@@ -22,6 +22,13 @@ defmodule Fib_Accumulator do
   defp _fib(count, {f1, f2}), do: _fib(count - 1, {f1 + f2, f1})
 end
 
+defmodule Fib_Accumulator2 do
+  def fib(n), do: _fib(n, 0, 1)
+
+  defp _fib(0, acc, _), do: acc
+  defp _fib(n, acc, next), do: _fib(n - 1, next, acc + next)
+end
+
 defmodule Fib_Cached do
   def fib(n, cache \\ %{1 => 1, 0 => 0}) do
     case Map.get(cache, n) do
@@ -63,6 +70,7 @@ defmodule AssertionTest_04Fibonacci do
 
     assert result == Fib_Stream.fib(n)
     assert result == Fib_Accumulator.fib(n)
+    assert result == Fib_Accumulator2.fib(n)
     assert result == Fib_BinetFormula.fib(n)
     assert {^result, _} = Fib_Cached.fib(n)
   end
@@ -87,6 +95,11 @@ defmodule Benchmark do
         "Fib_Accumulator" => fn inputs ->
           for n <- inputs do
             Fib_Accumulator.fib(n)
+          end
+        end,
+        "Fib_Accumulator2" => fn inputs ->
+          for n <- inputs do
+            Fib_Accumulator2.fib(n)
           end
         end,
         "Fib_BinetFormula" => fn inputs ->
