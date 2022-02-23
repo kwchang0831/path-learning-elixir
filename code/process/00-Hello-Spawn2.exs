@@ -11,10 +11,16 @@ defmodule Hello_Spawner do
     spawn(&greet/0)
   end
 
+  # Add TCO Looping
   def greet do
     receive do
       {caller, value} ->
-        IO.puts("#{inspect(self())} | Got Msg from #{inspect(caller)}: Hello #{value}")
+        send(
+          caller,
+          {:ok, "#{inspect(self())} | Got Msg from #{inspect(caller)}: Hello #{value}"}
+        )
+
+        greet()
     end
   end
 end
@@ -27,9 +33,24 @@ IO.puts("#{inspect(self())} | Started Hello_Spawner Server 1: #{inspect(pid)}")
 # Send message to the Server
 send(pid, {self(), "kwchang0831"})
 
-# 3) Client start Server by calling spawn
-pid = spawn(Hello_Spawner, :greet, [])
-IO.puts("#{inspect(self())} | Started Hello_Spawner Server 2: #{inspect(pid)}")
+receive do
+  {:ok, message} ->
+    IO.puts(message)
+end
 
 # Send message to the Server
-send(pid, {self(), "kwchang0831"})
+send(pid, {self(), "this is another message"})
+
+receive do
+  {:ok, message} ->
+    IO.puts(message)
+end
+
+# Timeout Example
+receive do
+  {:ok, message} ->
+    IO.puts(message)
+after
+  1000 ->
+    IO.puts("[INFO] We have not received any further messages.")
+end
